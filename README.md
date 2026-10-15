@@ -1,20 +1,76 @@
-# Heart Disease EDA and Classification
+# Heart Disease EDA & Machine Learning
 
-This is a Python lab project using the Cleveland heart disease dataset. The notebook covers the 14 EDA tasks from the assignment and adds Logistic Regression and Random Forest as a classification exercise.
+An exploratory data analysis and machine learning project using Python to analyze clinical data and identify patterns associated with heart disease.
 
-## Files
+## Objectives
+- Explore clinical and demographic features.
+- Handle missing values and duplicate records.
+- Visualize patterns and relationships in the data.
+- Train and evaluate machine learning classification models.
 
-- `heart.csv` - dataset used in the notebook
-- `heartdisease_eda.ipynb` - EDA, charts, findings and model comparison
-- `eda_report.txt` - short report created by the last notebook cell
-- `graphs/` - charts created when the notebook is run
-- `requirements.txt` - libraries needed to run it
+## Dataset
+The project uses the **UCI Heart Disease dataset**, containing 303 records and 14 original columns.
 
-## Run
+The original `num` target (0–4) is converted into a binary target:
+- `0` — No disease recorded
+- `1` — Disease recorded (`num > 0`)
 
-1. Extract the ZIP file.
-2. Open a terminal in the extracted project folder.
-3. Install the libraries with `python -m pip install -r requirements.txt`.
-4. Start Jupyter with `jupyter notebook`, open `heartdisease_eda.ipynb`, and run all cells from top to bottom.
+## Tech Stack
+- Python, Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- Jupyter Notebook
+- Git and GitHub
 
-The original `num` column has values 0 to 4. In the ML part, 0 means no disease was recorded and values 1 to 4 are grouped as disease present. The models are for this class project only and should not be used for medical decisions.
+## Analysis & Visualizations
+- Data inspection, cleaning, and summary statistics
+- Univariate, bivariate, and multivariate analysis
+- Correlation heatmap and outlier detection using IQR
+- Age-group, chest-pain, and heart-rate analysis
+
+Visualizations are saved in the `graphs/` directory.
+
+##  Machine Learning
+Two classification models are used:
+- **Logistic Regression**
+- **Random Forest Classifier**
+
+Evaluation includes accuracy, precision, recall, F1-score, ROC-AUC, confusion matrices, and stratified 5-fold cross-validation.
+
+## Project Structure
+
+```text
+Heart-Disease-EDA-ML/
+├── graphs/
+├── heart.csv
+├── heartdisease_eda.ipynb
+├── eda_report.txt
+├── requirements.txt
+└── README.md
+```
+
+## Getting Started
+
+```bash
+git clone https://github.com/buildwithanuska/Heart_disease_EDA.git
+cd Heart_disease_EDA
+python -m venv .venv
+```
+
+Activate the environment on Windows and install dependencies:
+
+```powershell
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+jupyter notebook
+```
+
+Open `heartdisease_eda.ipynb` and run the cells.
+
+##  Limitations
+- The dataset is relatively small and may not represent the wider population.
+- Results show associations, not causation.
+- This project is for educational purposes and is not a medical diagnostic tool.
+
+## Author
+**Anuska** · [GitHub](https://github.com/buildwithanuska)
